@@ -3,10 +3,10 @@ import flixel.FlxSprite;
 
 class Tile extends FlxSprite
 {
-	override public function new()
+	override public function new(tile:Tiles)
 	{
 		super();
 
-		makeGraphic(16, 16, FlxColor.WHITE);
+		makeGraphic(16, 16, tile);
 	}
 }

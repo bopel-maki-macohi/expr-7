@@ -35,7 +35,13 @@ class PlayState extends FlxState
 		{
 			while (x < dimensions)
 			{
-				var t = new Tile();
+				var ti:Tiles = water;
+
+				if (x > Math.round(dimensions / 2))
+					if (y > Math.round(dimensions / 2))
+						ti = land;
+
+				var t = new Tile(ti);
 				tiles.add(t);
 
 				t.screenCenter();
